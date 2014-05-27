@@ -12,12 +12,30 @@ Download [manually](https://github.com/danielhusar/sematic-dependencies/archive/
 npm install --global sematic-dependencies
 ```
 
-### Sample usage
+### Example
 
+```javascript
+var sd = require('sematic-dependencies');
+console.log(sd({
+  "dependencies": {
+    "object-extend": "^0.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.19.0",
+    "should": "^3.3.2"
+  }
+}));
+```
+
+### CLI
+
+Run it from folder where the package.json is located
 
 ```bash
-$ sd --help
-
+$ sd
+$ sd -p=~ -i=4
+$ sd --prefix=~ --indentation=4
+$ sd --prefix=~ --indentation=tab
 ```
 
 ## License
