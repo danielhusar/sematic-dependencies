@@ -9,7 +9,7 @@
     "modules"
   ],
   "bin": {
-    "nmq": "cli.js"
+    "sd": "cli.js"
   },
   "scripts": {
     "test": "mocha -R spec"
