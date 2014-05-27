@@ -13,7 +13,7 @@ sd = function(object, options){
   var fixVersion = function(prop, key){
     if(prop[key] === '*') {
       try {
-        info = require('./node_modules/' + key + '/package.json');
+        info = require(process.cwd() + '/node_modules/' + key + '/package.json');
         prop[key] = opts.prefix + info.version;
       } catch(e) {
         console.warn('Error, package not found for: ' + key, e);
