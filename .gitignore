@@ -3,4 +3,5 @@
 ._*
 .Spotlight-V100
 .Trashes
+*.log
 node_modules
