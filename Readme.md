@@ -1,6 +1,6 @@
 # Package Dependencies [![Build Status](https://travis-ci.org/danielhusar/sematic-dependencies.svg)](https://travis-ci.org/danielhusar/sematic-dependencies)
 
-Put the corrent dependencies version inside package.json isntead of * so we dont get unsupported version in future.
+Put the correct dependencies version inside package.json instead of * so we dont get unsupported version in future.
 
 ## Install
 
