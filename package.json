@@ -1,6 +1,6 @@
 {
   "name": "sematic-dependencies",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Put the corrent dependencies version inside package.json isntead of * so we dont get unsupported version in future.",
   "keywords": [
     "package",

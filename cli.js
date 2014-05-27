@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 var fs = require('fs');
+var path = require('path');
 var pkg = require('./package.json');
 var sd = require('./index');
+
 
 function help() {
   console.log(pkg.description);
@@ -16,7 +18,7 @@ function help() {
 }
 
 function init(data) {
-  var dependencies = require('./package.json');
+  var dependencies = require(path.dirname(fs.realpathSync(__filename)) + '/package.json');
   var indentation = 2;
   process.argv.forEach(function (val) {
     var item = val.split('=');
@@ -36,7 +38,7 @@ function init(data) {
   });
 
   dependencies = sd(dependencies);
-  fs.writeFileSync('./package.json', JSON.stringify(dependencies, null, indentation));
+  fs.writeFileSync(path.dirname(fs.realpathSync(__filename)) + '/package.json', JSON.stringify(dependencies, null, indentation));
 }
 
 if (process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
