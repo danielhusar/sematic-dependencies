@@ -21,13 +21,17 @@ sd = function(object, options){
     }
   };
 
-  Object.keys(object.dependencies).forEach(function(key) {
-    fixVersion(object.dependencies, key);
-  });
+  if(object.dependencies){
+    Object.keys(object.dependencies).forEach(function(key) {
+      fixVersion(object.dependencies, key);
+    });
+  }
 
-  Object.keys(object.devDependencies).forEach(function(key) {
-    fixVersion(object.devDependencies, key);
-  });
+  if(object.devDependencies){
+    Object.keys(object.devDependencies).forEach(function(key) {
+      fixVersion(object.devDependencies, key);
+    });
+  }
 
   return object;
 };
