@@ -17,16 +17,16 @@ function help() {
   console.log('  $ sd --prefix=~ --indentation=tab');
 }
 
-function init(data) {
-  var dependencies = require(path.dirname(fs.realpathSync(__filename)) + '/package.json');
+function init() {
+  var dependencies = require(process.cwd() + '/package.json');
   var indentation = 2;
   process.argv.forEach(function (val) {
     var item = val.split('=');
     var options = {};
-    if(item[0] == '-p' || item[0] == '--prefix') {
+    if(item[0] === '-p' || item[0] === '--prefix') {
       options.prefix = item[1];
     }
-    if(item[0] == '-i' || item[0] == '--indentation') {
+    if(item[0] === '-i' || item[0] === '--indentation') {
       if(!isNaN(Number(item[1]))){
         item[1] = Number(item[1]);
       }
@@ -38,7 +38,7 @@ function init(data) {
   });
 
   dependencies = sd(dependencies);
-  fs.writeFileSync(path.dirname(fs.realpathSync(__filename)) + '/package.json', JSON.stringify(dependencies, null, indentation));
+  fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(dependencies, null, indentation));
 }
 
 if (process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
