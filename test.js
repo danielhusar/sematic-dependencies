@@ -1,6 +1,6 @@
 'use strict';
 var should = require('should');
-var nmq = require('./index.js');
+var sd = require('./index.js');
 
 describe('Test', function(){
 
