@@ -4,14 +4,14 @@ var sd = require('./index.js');
 
 describe('Sematic versions', function(){
 
-  it('It should create sematic dependenices', function () {
+  it('It should create sematic dependencies', function () {
     var output = sd({
-      "dependencies": {
-        "object-extend": "*"
+      'dependencies': {
+        'object-extend': '*'
       },
-      "devDependencies": {
-        "mocha": "*",
-        "should": "0.0.1"
+      'devDependencies': {
+        'mocha': '*',
+        'should': '0.0.1'
       }
     });
 
@@ -22,14 +22,14 @@ describe('Sematic versions', function(){
     '0.0.1'.should.equal(output.devDependencies['should']);
   });
 
-  it('It should create sematic dependenices with custom option', function () {
+  it('It should create sematic dependencies with custom option', function () {
     var output = sd({
-      "dependencies": {
-        "object-extend": "*"
+      'dependencies': {
+        'object-extend': '*'
       },
-      "devDependencies": {
-        "mocha": "*",
-        "should": "0.0.1"
+      'devDependencies': {
+        'mocha': '*',
+        'should': '0.0.1'
       }
     }, {
       prefix: '~'
