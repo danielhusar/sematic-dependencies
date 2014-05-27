@@ -25,6 +25,17 @@ console.log(sd({
     "should": "3.3.2"
   }
 }));
+/*
+{
+  "dependencies": {
+    "object-extend": "^0.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.19.0",
+    "should": "3.3.2"
+  }
+}
+/*
 ```
 
 ### CLI
