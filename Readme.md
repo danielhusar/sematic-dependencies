@@ -18,11 +18,11 @@ npm install --global sematic-dependencies
 var sd = require('sematic-dependencies');
 console.log(sd({
   "dependencies": {
-    "object-extend": "^0.5.0"
+    "object-extend": "*"
   },
   "devDependencies": {
-    "mocha": "^1.19.0",
-    "should": "^3.3.2"
+    "mocha": "*",
+    "should": "3.3.2"
   }
 }));
 ```
@@ -37,6 +37,17 @@ $ sd -p=~ -i=4
 $ sd --prefix=~ --indentation=4
 $ sd --prefix=~ --indentation=tab
 ```
+
+## Options
+
+
+#### prefix
+
+Type: `String`  
+Default: '^'
+
+Prefix for your package dependencies.
+(most used are ^ or ~)
 
 ## License
 
