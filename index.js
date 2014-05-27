@@ -28,6 +28,8 @@ sd = function(object, options){
   Object.keys(object.devDependencies).forEach(function(key) {
     fixVersion(object.devDependencies, key);
   });
+
+  return object;
 };
 
 module.exports = sd;
