@@ -14,7 +14,7 @@ npm install --global sematic-dependencies
 
 ### Example
 
-If you have you dependencies already installed in node_modules folder, it will get the version from that folder
+If you have your dependencies already installed in node_modules folder, it will get the version from that folder
 ```javascript
 var sd = require('sematic-dependencies');
 console.log(sd({
