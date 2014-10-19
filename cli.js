@@ -20,15 +20,15 @@ function init() {
 
     process.argv.forEach(function (val) {
       var item = val.split('=');
-      if(item[0] === '-p' || item[0] === '--prefix') {
+      if (item[0] === '-p' || item[0] === '--prefix') {
         options.prefix = item[1];
       }
-      if(item[0] === '-i' || item[0] === '--indentation') {
-        if(!isNaN(Number(item[1]))){
+      if (item[0] === '-i' || item[0] === '--indentation') {
+        if (!isNaN(Number(item[1]))) {
           item[1] = Number(item[1]);
         }
         indentation = item[1];
-        if(indentation === 'tab'){
+        if (indentation === 'tab') {
           indentation = '\t';
         }
       }
@@ -36,7 +36,7 @@ function init() {
 
     dependencies = sd(dependencies, options);
     fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(dependencies, null, indentation));
-  }catch(e) {
+  } catch(e) {
     console.warn('Error:', e);
   }
 }
